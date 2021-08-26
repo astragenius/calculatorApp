@@ -8,23 +8,91 @@
   <link href="https://fonts.googleapis.com/css?family=Spartan:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
   <script defer src="/app/js/script.js"></script>
  <link rel="stylesheet" href="/dist/style.css">
-  
   <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
 
-  
-  <div class="attribution">
+
+    <div class="container">
+
+
+
+        <header class="header">
+
+            <div class="header__headline">
+              <h1>calc</h1>
+            </div>
+            <div class="header__toggle">
+
+              <fieldset>
+                <legend>Theme</legend>
+                <input name="state" value="dark" id="dark" type="radio" checked>
+                <label for="dark">1</label>
+                <input name="state" value="light" id="light" type="radio">
+                <label for="light">2</label>
+                <input name="state" value="color" id="color" type="radio">
+                <label for="color">3</label>
+            </fieldset>
+
+            </div>
+
+        </header>
+
+       <main class="main__container">
+
+            <div class="output">
+              <div class="output__display">
+                <p>299,981</p>
+              </div>
+            </div>
+            
+
+            <div class="button__container">
+
+
+              <button class="button">7</button>
+              <button class="button">8</button>
+              <button class="button">9</button>
+              <button class="button">DEL</button>
+              <button class="button">4</button>
+              <button class="button">5</button>
+              <button class="button">6</button>
+              <button class="button">+</button>
+              <button class="button">1</button>
+              <button class="button">2</button>
+              <button class="button">3</button>
+              <button class="button">-</button>
+              <button class="button">.</button>
+              <button class="button">0</button>
+              <button class="button">/</button>
+              <button class="button">x</button>
+              <button class="button">RESET</button>
+              <button class="button">=</button>
+
+            </div>
+
+
+       </main> 
+       
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 
   
 </body>
