@@ -1,2 +1,9 @@
 @use '../unil/' as *;
 
+.button {
+
+    width: rem(101);
+    height: rem(64);
+    outline: none;
+    font-size: rem(32);
+}
