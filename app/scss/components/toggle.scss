@@ -7,7 +7,7 @@ fieldset {
     display: flex;
     justify-content: space-around; 
     width: 11rem;
-    padding: 0 1rem 1rem;
+   /*  padding: 0 1rem 1rem; */
     border:0;
     text-align: center;
 
@@ -26,10 +26,12 @@ fieldset {
 
         display: inline-block;
         position: relative;
-        width: 3rem;
+        width: 1rem;
         padding-bottom: 2rem;
         z-index: 2;
         cursor: pointer;
+        font-size: rem(12);
+        font-weight: bold;
     }
 
     label:first-of-type {
@@ -37,13 +39,17 @@ fieldset {
         z-index: 1;
     }
 
+    div {
+
+        
+    }
 
     input {
 
         position: absolute;
         top: 0;
         height: 100%;
-        width: 33%;
+        width: 33%; // 33%
         appearance: none;
         background: none;
         opacity: 0.000001;
@@ -82,8 +88,10 @@ fieldset {
 
         content: '';
         position: absolute;
-        height: 1.5rem;
-        width: 1.5rem;
+        /* height: 1.5rem;
+        width: 1.5rem; */
+        height: rem(16);
+        width: rem(16);
         background-color: #f96b5b;
         border-radius: 50%;
         bottom: 0.25rem;
@@ -92,15 +100,15 @@ fieldset {
     }
 
     
-    input:first-of-type:checked ~ label:last-of-type::after {
+    input:first-of-type:checked ~ div > label:last-of-type::after {
         transform: translateX(-6rem);
     }
     
-    input:nth-of-type(2):checked ~ label:last-of-type::after {
+    input:nth-of-type(2):checked ~ div > label:last-of-type::after {
         transform: translateX(-3rem);
     }
     
-    input:last-of-type:checked ~ label:last-of-type::after {
+    input:last-of-type:checked ~ div > label:last-of-type::after {
         transform: translateX(0);
     }
 
