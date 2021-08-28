@@ -1,6 +1,15 @@
 @use '../unil' as *;
 
 
+.main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
 
 .calculator {
 
@@ -8,9 +17,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* border: 2px solid black; */
     gap: rem(10);
-    margin: 0 auto;
     max-width: rem(540);
     height: rem(708);
 }
@@ -20,8 +27,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-   /*  border: 2px solid black; */
     width: 100%;
+    border: 2px solid black;
+    
 }
 
 .main__container {
@@ -39,9 +47,8 @@
     align-items: center;
     justify-content: end;
     width :100%;
-    /* height: rem(128); */
-    border: 2px solid black;
-    margin-top: rem(32);
+   
+    margin-top: rem(15);
 
     &__display {
 
@@ -58,6 +65,9 @@
     display: grid;
     justify-content: center;
     margin-top: rem(24);
+    padding: rem(32);
+    width: 100%;
+    
 }
 
 .button__container {
