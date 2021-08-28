@@ -6,10 +6,11 @@ fieldset {
     position: relative;
     display: flex;
     justify-content: space-around; 
-    width: 11rem;
+    width: rem(71);    //11
    /*  padding: 0 1rem 1rem; */
     border:0;
     text-align: center;
+    padding: 0;
 
 
     legend {
@@ -41,7 +42,7 @@ fieldset {
 
     div {
 
-        
+        width: rem(71);
     }
 
     input {
@@ -56,14 +57,6 @@ fieldset {
     }
 
 
-    // Focus styles
-
-    input:focus + label {
-
-        text-decoration: underline;
-    }
-
-
 
 
     // Toggle background
@@ -73,11 +66,9 @@ fieldset {
         content: "";
         position: absolute;
         width: rem(71);
-       /*  width: 8rem; */
-        /* height: 2rem; */
         height: rem(26);
         bottom: 0;
-        left: 0.5rem;
+        left: -0.5rem;
         background-color: #232d44;
         border-radius: 0.95rem;
     }
@@ -88,28 +79,26 @@ fieldset {
 
         content: '';
         position: absolute;
-        /* height: 1.5rem;
-        width: 1.5rem; */
         height: rem(16);
         width: rem(16);
         background-color: #f96b5b;
         border-radius: 50%;
-        bottom: 0.25rem;
-        right: 0.75rem;
+        bottom: rem(5);
+        right: rem(15);
         transition: transform 0.3s ease;
     }
 
     
     input:first-of-type:checked ~ div > label:last-of-type::after {
-        transform: translateX(-6rem);
+        transform: translateX(-1.6rem);
     }
     
     input:nth-of-type(2):checked ~ div > label:last-of-type::after {
-        transform: translateX(-3rem);
+        transform: translateX(-0.4rem);
     }
     
     input:last-of-type:checked ~ div > label:last-of-type::after {
-        transform: translateX(0);
+        transform: translateX(0.8rem);
     }
 
 
