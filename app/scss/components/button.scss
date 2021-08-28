@@ -5,9 +5,11 @@
     min-width: rem(101);
     height: rem(64);
     font-size: rem(32);
-    border-radius: rem(10)
+    font-weight: 700;
+    border-radius: rem(10);
+    letter-spacing: rem(2);
+    border: none;
 
-   
 }
 
 .button__reset {
@@ -25,11 +27,16 @@
     grid-column-end: -1;
     grid-row-start: 5;
     grid-row-end: -1;
-    
 
+}
+
+.button__del {
+
+    font-size: rem(20);
 }
 
 .button--size {
 
     min-width: rem(227);
+    font-size: rem(20);
 }

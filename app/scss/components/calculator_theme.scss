@@ -1,0 +1,110 @@
+body {
+
+    background-color: var(--mainBackground);
+}
+
+fieldset {
+
+
+    label:first-of-type::before {
+
+        background-color: var(--toggleBackground);
+    }
+
+    label:last-of-type::after {
+
+        background-color: var(--keyBackgroundToggle);
+    }
+
+    label:hover:last-of-type::before {
+
+        background-color: blue;
+    }
+
+        
+    
+
+}
+
+
+.header {
+
+
+    &__headline {
+
+        h1 {
+
+            color: var(--textlight);
+        }
+    }
+
+    &__toggle {
+
+        color: var(--textlight);
+    }
+}
+
+.output {
+
+    background-color: var(--screenBackground);
+
+    &__display {
+
+        color: var(--textlight);
+    }
+}
+
+.button__grid_container {
+
+    background-color: var(--toggleBackground);
+}
+
+
+.button {
+
+    color: var(--textDark);
+    background-color: var(--keyBackground2);
+    box-shadow: inset 0px -4px 0px var(--keyShadow2);
+    
+    &:hover {
+
+        background-color: var(--keyHover);
+    }
+
+    &__del {
+
+        background-color: var(--keyBackground);
+        color: var(--textlight);
+        box-shadow: inset 0px -4px 0px var(--keyShadow);
+    }
+
+    &__del:hover {
+
+        background-color: var(--resetHover);
+    }
+
+    &__reset {
+
+        background-color: var(--keyBackground);
+        color: var(--textlight);
+        box-shadow: inset 0px -4px 0px var(--keyShadow);
+
+    }
+
+    &__reset:hover {
+
+        background-color: var(--resetHover);
+    }
+
+    &__equal {
+
+        background-color: var(--keyBackgroundToggle);
+        color: var(--textlight);
+        box-shadow: inset 0px -4px 0px var(--keyShadow1);
+    }
+
+    &__equal:hover {
+
+        background-color: var(--equalHover);
+    }
+}
