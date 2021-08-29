@@ -4,25 +4,35 @@
 
     // Background 
 
-    --mainBackground: hsl(268, 75%, 9%);
-    --toggleBackground: hsl(268, 71%, 12%);
+    --mainBackground: #160628;
+    --toggleBackground: #1d0934;
+    --screenBackground: #1d0934;
 
     //Keys
 
-    --keyBackground: hsl(281, 89%, 26%);
-    --keyShadow: hsl(285, 91%, 52%);
+    --keyBackground: #58077d;
+    --keyShadow: #bc15f4;
 
     --keyBackgroundToggle: hsl(176, 100%, 44%);
-    --keyShadow1: hsl(177, 92%, 70%);
+     --keyShadow1: hsl(177, 92%, 70%);
 
-    --keyBackground2: hsl(268, 47, 21%);
-    --keyShadow2: hsl(290, 70%, 36%);
+    --keyBackground2: #341c4f;
+    --keyShadow2: #871c9c;
 
 
     // Text 
 
     --textDark: hsl(52, 100%, 62%);
     --textBlue: hsl(198, 20%, 13%);
-    --textlight: hsl(0, 0, 100%);
+    --textlight: rgb(255, 255, 255);
+
+
+    
+     // hover color 
+
+     --equalHover: #93FFF8;
+     --resetHover:#8631AF;
+     --keyHover: #6C34AC;
+
 
 }
