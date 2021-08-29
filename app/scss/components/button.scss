@@ -14,6 +14,13 @@
     cursor: pointer;
     @include transition;
 
+    @include breakpoint-up(mobile) {
+
+      min-width: rem(64);
+      border-radius: rem(5);
+    }
+   
+
 }
 
 .button__reset {
@@ -22,6 +29,13 @@
     grid-column-end: -3;
     grid-row-start: 5;
     grid-row-end: 6;
+
+    @include breakpoint-up(mobile) {
+
+        width: rem(50);
+
+       
+    }
     
 }
 
@@ -37,10 +51,21 @@
 .button__del {
 
     font-size: rem(20);
+
+    @include breakpoint-up(mobile) {
+
+        font-size: rem(16);
+    }
 }
 
 .button--size {
 
     min-width: rem(227);
     font-size: rem(20);
+
+    @include breakpoint-up(mobile) {
+
+        min-width: rem(133);
+        font-size: rem(16);
+    }
 }
