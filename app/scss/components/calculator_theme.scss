@@ -34,13 +34,13 @@ fieldset {
 
         h1 {
 
-            color: var(--textlight);
+            color: var(--textHead);
         }
     }
 
     &__toggle {
 
-        color: var(--textlight);
+        color: var(--textHead);
     }
 }
 
@@ -50,7 +50,7 @@ fieldset {
 
     &__display {
 
-        color: var(--textlight);
+        color: var(--textHead);
     }
 }
 
@@ -99,7 +99,7 @@ fieldset {
     &__equal {
 
         background-color: var(--keyBackgroundToggle);
-        color: var(--textlight);
+        color: var(--textEqual);
         box-shadow: inset 0px -4px 0px var(--keyShadow1);
     }
 

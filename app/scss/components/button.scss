@@ -12,6 +12,7 @@
     font-family: var(--font-spartan);
     padding-bottom: rem(5);
     cursor: pointer;
+    @include transition;
 
 }
 
