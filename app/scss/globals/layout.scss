@@ -70,6 +70,7 @@
         @include breakpoint-up(mobile) {
 
             font-size: rem(32);
+            padding: rem(29);
         }
     } 
        
@@ -83,6 +84,11 @@
     padding: rem(32);
     max-width: 100%;
     border-radius: rem(10);
+
+    @include breakpoint-up(mobile) {
+
+        padding: rem(28);
+    }
 
     
     
