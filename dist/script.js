@@ -1,2 +1,2 @@
-"use strict";console.log("hello"),console.log("hallo du");
+"use strict";var toggleInput=document.querySelectorAll("input[name=state]");function switchTheme(e){var t=document.querySelector("html");return"theme-1"==e.target.value?(t.classList.remove("theme-2"),t.classList.remove("theme-3"),void t.classList.add("theme-1")):"theme-2"==e.target.value?(t.classList.remove("theme-1"),t.classList.remove("theme-3"),void t.classList.add("theme-2")):void("theme-3"==e.target.value&&(t.classList.remove("theme-2"),t.classList.remove("theme-1"),t.classList.add("theme-3")))}toggleInput.forEach((function(e){e.addEventListener("click",switchTheme)}));
 //# sourceMappingURL=script.js.map
