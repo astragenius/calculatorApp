@@ -1,3 +1,5 @@
+@use '../unil/' as *;
+
 :root,
 :root.theme-1 {
 
@@ -38,5 +40,8 @@
     --equalHover: hsl(6, 93%, 67%);
     --resetHover: hsl(225, 51%, 76%);
     --keyHover: hsl(0, 0%, 100%);
+
+
+    @include transition;
 
 }

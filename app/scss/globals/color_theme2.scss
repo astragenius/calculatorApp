@@ -1,3 +1,6 @@
+@use '../unil/' as *;
+
+
 :root.theme-2 {
 
 
@@ -34,5 +37,5 @@
      --resetHover:hsl(185, 40%, 56%);
      --keyHover: hsl(0, 0%, 100%);
 
-
+     @include transition;
 }
