@@ -29,3 +29,11 @@ function switchTheme(e) {
 
 }
 
+
+const nrButton = document.querySelectorAll('button[value]');
+const delButton = document.getElementById('button_del');
+
+delButton.addEventListener('click',() => console.log(delButton.value));
+
+console.log(delButton.value);
+
