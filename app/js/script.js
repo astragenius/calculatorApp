@@ -30,10 +30,36 @@ function switchTheme(e) {
 }
 
 
-const nrButton = document.querySelectorAll('button[value]');
-const delButton = document.getElementById('button_del');
+class Calculator {
 
-delButton.addEventListener('click',() => console.log(delButton.value));
 
-console.log(delButton.value);
+
+    showOutput() {
+
+
+    }
+
+    
+}
+
+
+const nrBtn = document.querySelectorAll('button[value]');
+const delBtn = document.getElementById('button_del');
+const plusBtn = document.getElementById('button_+');
+const minusBtn = document.getElementById('button_-');
+const pointBtn = document.getElementById('button_.');
+const geteiltBtn = document.getElementById('button_/');
+const malBtn = document.getElementById('button_x');
+const resetBtn = document.getElementById('button_reset');
+const equalBtn = document.getElementById('button_equal');
+const output = document.getElementById('output');
+
+
+
+
+
+
+
+
+
 
