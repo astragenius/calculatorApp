@@ -59,11 +59,11 @@
     width :100%;
     border-radius: rem(10);
     margin-top: rem(15);
-    min-height: rem(128);
+    min-height: rem(127);
 
     @include breakpoint-up(mobile) {
 
-        min-height: rem(88);
+        min-height: rem(100);
     }
 
     &__display {
