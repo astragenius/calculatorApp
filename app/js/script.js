@@ -35,17 +35,20 @@ class Calculator {
     constructor(output) {
 
         this.output = output;
-        this.clear();
+        
     }
 
     clear() {
-
+    
+        this.currentOperant = "";
         this.output = "";
-
     }
 
     appendNumber(number){
 
+      
+
+      this.currentOperant = number
 
     }
 
@@ -57,7 +60,8 @@ class Calculator {
 
     updateScreen(){
 
-
+        this.output.innerText = this.currentOperant;
+      
     }
 
     selectOperation(operation){
@@ -84,6 +88,19 @@ const malBtn = document.getElementById('button_x');
 const resetBtn = document.getElementById('button_reset');
 const equalBtn = document.getElementById('button_equal');
 const output = document.getElementById('output');
+
+
+const calculator = new Calculator(output);
+
+nrBtn.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        calculator.appendNumber(button.innerText);
+        calculator.updateScreen();
+       
+    })
+})
 
 
 
