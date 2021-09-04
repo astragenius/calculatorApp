@@ -32,9 +32,10 @@ function switchTheme(e) {
 
 class Calculator {
 
-    constructor(output) {
+    constructor(output, prevOperant) {
 
         this.output = output;
+        this.prevOperant = prevOperant;
         this.clear();
         
     }
@@ -71,17 +72,24 @@ class Calculator {
     updateScreen(){
 
         this.output.innerText = this.currentOperant;
+       
       
     }
 
     selectOperation(operation){
 
-        console.log(operation);
+        this.operation = operation;
+        this.prevOperant = this.currentOperant;
+        this.currentOperant = "";
+       
+
+
 
     }
 
     compute() {
 
+        
 
     }
 
@@ -134,6 +142,12 @@ delBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
 
     calculator.clear();
+    calculator.updateScreen();
+})
+
+equalBtn.addEventListener('click', () => {
+
+    calculator.compute();
     calculator.updateScreen();
 })
 
