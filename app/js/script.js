@@ -32,9 +32,40 @@ function switchTheme(e) {
 
 class Calculator {
 
+    constructor(output) {
+
+        this.output = output;
+        this.clear();
+    }
+
+    clear() {
+
+        this.output = "";
+
+    }
+
+    appendNumber(number){
 
 
-    showOutput() {
+    }
+
+    
+    delete(){
+
+
+    }
+
+    updateScreen(){
+
+
+    }
+
+    selectOperation(operation){
+
+
+    }
+
+    compute() {
 
 
     }
