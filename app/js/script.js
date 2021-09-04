@@ -66,9 +66,15 @@ class Calculator {
 
     
     delete(){
-
+        
+        
        this.currentOperant = this.currentOperant.slice(0, -1);
        
+    }
+
+    showError() {
+
+        this.currentOperant = "ERROR";
     }
 
     updateScreen(){
@@ -83,9 +89,6 @@ class Calculator {
         this.operation = operation;
         this.prevOperant = this.currentOperant;
         this.currentOperant = "";
-       
-
-
 
     }
 
@@ -109,6 +112,11 @@ class Calculator {
                 break;
             
             case '/':
+                if(current == 0) {
+
+                   this.showError();
+                    return;
+                }
                 result = prev / current;
                 console.log(result);
                 break;
