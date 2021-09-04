@@ -1,3 +1,5 @@
+
+
 const toggleInput = document.querySelectorAll('input[name=state]');
 
 
@@ -89,7 +91,32 @@ class Calculator {
 
     compute() {
 
-        
+        switch (this.operation) {
+
+           
+            case '+':
+                this.result = parseInt(this.prevOperant) + parseInt(this.currentOperant);
+                console.log(this.result);
+                break;
+
+
+            case '-':
+                this.result = parseInt(this.prevOperant) - parseInt(this.currentOperant);
+                console.log(this.result);
+                break;
+            
+            case '/':
+                this.result = parseInt(this.prevOperant) / parseInt(this.currentOperant);
+                console.log(this.result);
+                break;
+            
+            case 'x':
+                this.result = parseInt(this.prevOperant) * parseInt(this.currentOperant);
+                console.log(this.result.toString());
+                break;
+
+
+        }   
 
     }
 
