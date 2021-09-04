@@ -90,34 +90,45 @@ class Calculator {
     }
 
     compute() {
-
+        let result;
+        const prev = parseFloat(this.prevOperant);
+        const current = parseFloat(this.currentOperant);
+        if (isNaN(prev) || isNaN(current)) return
         switch (this.operation) {
 
            
             case '+':
-                this.result = parseInt(this.prevOperant) + parseInt(this.currentOperant);
-                console.log(this.result);
+                result = prev + current;
+                console.log(result);
                 break;
 
 
             case '-':
-                this.result = parseInt(this.prevOperant) - parseInt(this.currentOperant);
-                console.log(this.result);
+                result = prev - current;
+                console.log(result);
                 break;
             
             case '/':
-                this.result = parseInt(this.prevOperant) / parseInt(this.currentOperant);
-                console.log(this.result);
+                result = prev / current;
+                console.log(result);
                 break;
             
             case 'x':
-                this.result = parseInt(this.prevOperant) * parseInt(this.currentOperant);
-                console.log(this.result.toString());
+                result = prev * current;
+                console.log(result);
                 break;
+            
+            default:
+                return;
 
 
         }   
 
+        result = result.toString();
+        this.currentOperant = result;
+        this.prevOperant = "";
+        this.operation = undefined;
+        
     }
 
     
