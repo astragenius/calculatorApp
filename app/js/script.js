@@ -41,12 +41,16 @@ class Calculator {
 
     clear() {
     
+       
         this.currentOperant = "";
+        this.prevOperant = "";
+        this.operation = undefined;
        
     }
 
     appendNumber(number){
 
+       
       if(number === "." && this.currentOperant.includes(".")) {
         return
       }else {
@@ -60,7 +64,8 @@ class Calculator {
     
     delete(){
 
-
+       this.currentOperant = this.currentOperant.slice(0, -1);
+       
     }
 
     updateScreen(){
@@ -71,6 +76,7 @@ class Calculator {
 
     selectOperation(operation){
 
+        console.log(operation);
 
     }
 
@@ -85,14 +91,14 @@ class Calculator {
 
 const nrBtn = document.querySelectorAll('button[value]');
 const delBtn = document.getElementById('button_del');
-const plusBtn = document.getElementById('button_+');
-const minusBtn = document.getElementById('button_-');
-const pointBtn = document.getElementById('button_.');
-const geteiltBtn = document.getElementById('button_/');
-const malBtn = document.getElementById('button_x');
+
+
+
 const resetBtn = document.getElementById('button_reset');
 const equalBtn = document.getElementById('button_equal');
 const output = document.getElementById('output');
+const operant = document.querySelectorAll('button[data-set]');
+
 
 
 const calculator = new Calculator(output);
@@ -106,6 +112,31 @@ nrBtn.forEach(button => {
        
     })
 })
+
+operant.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        calculator.selectOperation(button.innerText);
+        calculator.updateScreen();
+    })
+})
+
+
+
+delBtn.addEventListener('click', () => {
+
+        calculator.delete();
+        calculator.updateScreen();
+       
+})
+
+resetBtn.addEventListener('click', () => {
+
+    calculator.clear();
+    calculator.updateScreen();
+})
+
 
 
 
