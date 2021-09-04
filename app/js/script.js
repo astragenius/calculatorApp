@@ -35,20 +35,25 @@ class Calculator {
     constructor(output) {
 
         this.output = output;
+        this.clear();
         
     }
 
     clear() {
     
         this.currentOperant = "";
-        this.output = "";
+       
     }
 
     appendNumber(number){
 
-      
+      if(number === "." && this.currentOperant.includes(".")) {
+        return
+      }else {
+      this.currentOperant = this.currentOperant.toString() + number.toString();
 
-      this.currentOperant = number
+      }
+      
 
     }
 
@@ -101,6 +106,9 @@ nrBtn.forEach(button => {
        
     })
 })
+
+
+
 
 
 
