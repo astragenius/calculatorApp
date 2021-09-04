@@ -132,8 +132,8 @@ class Calculator {
 
         }   
 
-        result = result.toString();
-        this.currentOperant = result;
+        result = parseFloat(result);
+        this.currentOperant = result.toFixed(2);
         this.prevOperant = "";
         this.operation = undefined;
         
