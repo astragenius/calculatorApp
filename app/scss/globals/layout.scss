@@ -60,6 +60,7 @@
     border-radius: rem(10);
     margin-top: rem(15);
     min-height: rem(127);
+    overflow: hidden;
 
     @include breakpoint-up(mobile) {
 

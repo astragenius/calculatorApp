@@ -1,5 +1,6 @@
 
 
+
 const toggleInput = document.querySelectorAll('input[name=state]');
 
 
@@ -77,9 +78,17 @@ class Calculator {
         this.currentOperant = "ERROR";
     }
 
+    getDisplayNumber(number) {
+
+        const floatNumber = parseFloat(number);
+        if (isNaN(floatNumber)) return "";
+        return floatNumber.toLocaleString('en');
+
+    }
+
     updateScreen(){
 
-        this.output.innerText = this.currentOperant;
+        this.output.innerText = this.getDisplayNumber(this.currentOperant);
        
       
     }
@@ -143,11 +152,11 @@ class Calculator {
 }
 
 
+
+
+
 const nrBtn = document.querySelectorAll('button[value]');
 const delBtn = document.getElementById('button_del');
-
-
-
 const resetBtn = document.getElementById('button_reset');
 const equalBtn = document.getElementById('button_equal');
 const output = document.getElementById('output');
