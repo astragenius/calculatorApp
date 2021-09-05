@@ -49,6 +49,8 @@ class Calculator {
         this.currentOperant = "";
         this.prevOperant = "";
         this.operation = undefined;
+        this.output.classList.remove('error');
+       
        
     }
 
@@ -75,6 +77,7 @@ class Calculator {
 
     showError() {
 
+        this.output.classList.toggle('error');
         this.currentOperant = "ERROR";
     }
 
