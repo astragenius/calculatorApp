@@ -54,7 +54,7 @@ class Calculator {
 
     appendNumber(number){
 
-       
+       // this if statement checks the currentoperant. When he has a "." allready then the function stops. when not the point will be added.
       if(number === "." && this.currentOperant.includes(".")) {
         return
       }else {
@@ -88,7 +88,13 @@ class Calculator {
 
     updateScreen(){
 
-        this.output.innerText = this.getDisplayNumber(this.currentOperant);
+        if (this.currentOperant == "ERROR") {
+
+            this.output.innerText = this.currentOperant;
+        } else{
+            this.output.innerText = this.getDisplayNumber(this.currentOperant);
+
+        }
        
       
     }
@@ -167,41 +173,33 @@ const operant = document.querySelectorAll('button[data-set]');
 const calculator = new Calculator(output);
 
 nrBtn.forEach(button => {
-
     button.addEventListener('click', () => {
-
         calculator.appendNumber(button.innerText);
         calculator.updateScreen();
-       
     })
 })
 
 operant.forEach(button => {
 
     button.addEventListener('click', () => {
-
         calculator.selectOperation(button.innerText);
         calculator.updateScreen();
     })
 })
 
 
-
 delBtn.addEventListener('click', () => {
-
         calculator.delete();
         calculator.updateScreen();
        
 })
 
 resetBtn.addEventListener('click', () => {
-
     calculator.clear();
     calculator.updateScreen();
 })
 
 equalBtn.addEventListener('click', () => {
-
     calculator.compute();
     calculator.updateScreen();
 })
